@@ -11,6 +11,10 @@ Status: **belum dideploy**. Tidak ada proyek Vercel yang ditautkan dalam reposit
 - Seluruh halaman mengirim `X-Robots-Tag: noindex, nofollow, noarchive` dan metadata robots.
 - Rute demo bersifat publik jika deployment tidak diberi proteksi. Preview login bukan akses kontrol.
 
+## Rekomendasi Deployment Protection
+
+Untuk uji QR lintas ponsel, gunakan staging HTTPS sintetis tanpa proteksi hanya selama jendela pengujian yang disetujui; `noindex` tetap aktif dan tidak ada data nyata. Jika akses klien harus dibatasi, aktifkan Vercel Deployment Protection atau password protection pada project staging dan berikan kredensial secara terpisah kepada penguji. QR tidak boleh memuat password atau bypass secret. Uji rute QR, video, dan download dari ponsel setelah proteksi aktif.
+
 ## Setelah persetujuan deployment
 
 1. Tentukan team/project Vercel tujuan dan akun yang memiliki akses; gunakan paket yang sesuai penggunaan komersial.
